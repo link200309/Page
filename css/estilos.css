@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgb(0, 0, 10), rgb(0, 0, 50));
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+  padding: 20px;
+}
+
+nav > a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgb(251, 251, 251);
+  font-weight: 1;
+  font-size: 1.5em;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(/img/escenario4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 50px;
+}
+
+.titulo_principal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo_principal h1 {
+  color: #fff;
+  font-size: 5em;
+}
+
+.titulo_principal h2 {
+  color: #fff;
+  font-weight: 10;
+  margin-bottom: 50px;
+}
+
+.edificios_header {
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.edificios_header img:first-child {
+  width: 8%;
+}
+
+.edificios_header img:nth-child(2) {
+  width: 20%;
+}
+/*SECCION PRODUCTOS*/
+
+.nuestro_Producto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.titulos_secciones {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 80px;
+  font-size: 3em;
+  color: rgb(125, 190, 247);
+}
+
+.nuestro_Producto > img {
+  width: 20%;
+}
+
+.titulos_tarjetas {
+  text-align: center;
+  padding: 20px;
+  color: orange;
+}
+
+.nuestro_Producto p {
+  text-align: justify;
+  font-size: 20px;
+  width: 100%;
+  color: #fff;
+}
+
+.descripcion_producto {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.num_producto {
+  width: 2em;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid blue;
+  border-radius: 50%;
+  text-align: center;
+  background: radial-gradient(circle, rgb(183, 183, 242), rgb(0, 0, 200));
+  color: #fff;
+}
+
+/*SECCION DE PORTAFOLIO*/
+
+.tarjetas {
+  width: 95%;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  box-shadow: 8px 6px 0px 2px rgb(104, 137, 255);
+  margin: 20px 20px 100px 20px;
+}
+
+.tarjeta {
+  position: relative;
+  display: flex;
+  width: 18%;
+  height: 30%;
+  margin: 20px;
+  box-shadow: 2px 2px 5px 5px rgb(206, 238, 238);
+}
+
+.tarjeta > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.transicion {
+  transition: transform 0.5s;
+  transform: scale(0);
+  opacity: 0.7;
+}
+
+.tarjeta:hover .transicion {
+  transform: scale(1);
+}
+
+/*OPINIONES*/
+.opiniones {
+  padding: 20px;
+  margin: 20px 20px 100px 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.opinion {
+  width: 30%;
+  /* height: 200px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(117, 10, 58);
+  box-shadow: 2px 2px 5px 5px rgb(206, 238, 238);
+}
+
+.opinion img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.opinion > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opinion > div p {
+  font-size: 17px;
+  text-align: justify;
+  color: #fff;
+  padding: 10px;
+}
+
+/*SERVICIOS*/
+.nuestros_servicios {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.servicio {
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(#a8a5f9, #000000);
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.servicio > div {
+  width: 100%;
+  padding: 10px;
+}
+
+.servicio > img {
+  width: 100%;
+  height: 80%;
+}
+
+.servicio > div p {
+  color: #fff;
+  text-align: justify;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #393535ce;
+}
+
+.pie_pagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.dato_footer p {
+  color: #fff;
+  text-align: center;
+}
+
+.dato_footer p:first-child {
+  border-bottom: 1px solid #43e6f8;
+}
+
+.pie_pagina_parte2 {
+  padding: 10px;
+}
+
+.pie_pagina_parte2 h2 {
+  color: aliceblue;
+  text-align: center;
+}
