@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
@@ -51,12 +52,14 @@ header {
 .titulo_principal h1 {
   color: #fff;
   font-size: 5em;
+  text-align: center;
 }
 
 .titulo_principal h2 {
   color: #fff;
   font-weight: 10;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .edificios_header {
@@ -78,35 +81,23 @@ header {
 /*SECCION PRODUCTOS*/
 
 .nuestro_Producto {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 100px;
 }
 
-.titulos_secciones {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 80px;
-  font-size: 3em;
-  color: rgb(125, 190, 247);
+.producto {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.nuestro_Producto > img {
-  width: 20%;
-}
-
-.titulos_tarjetas {
-  text-align: center;
-  padding: 20px;
-  color: orange;
-}
-
-.nuestro_Producto p {
-  text-align: justify;
-  font-size: 20px;
-  width: 100%;
-  color: #fff;
+.producto > img {
+  width: 40%;
+  height: 80%;
 }
 
 .descripcion_producto {
@@ -115,7 +106,14 @@ header {
   margin: 10px;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  width: 60%;
+}
+
+.nuestro_Producto p {
+  text-align: justify;
+  font-size: 20px;
+  width: 100%;
+  color: #fff;
 }
 
 .num_producto {
@@ -130,11 +128,31 @@ header {
   color: #fff;
 }
 
+.titulos_secciones {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 80px;
+  font-size: 3em;
+  color: rgb(125, 190, 247);
+}
+
+.titulos_tarjetas {
+  text-align: center;
+  padding: 20px;
+  color: orange;
+}
+
 /*SECCION DE PORTAFOLIO*/
 
+.Portafolio_galeria {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tarjetas {
-  width: 95%;
-  height: 800px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -149,7 +167,7 @@ header {
   position: relative;
   display: flex;
   width: 18%;
-  height: 30%;
+  height: 200px;
   margin: 20px;
   box-shadow: 2px 2px 5px 5px rgb(206, 238, 238);
 }
@@ -183,7 +201,6 @@ header {
 
 .opinion {
   width: 30%;
-  /* height: 200px; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -277,4 +294,136 @@ footer {
 .pie_pagina_parte2 h2 {
   color: aliceblue;
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  nav > a {
+    margin-right: 3px;
+    font-size: 1em;
+  }
+
+  .titulo_principal h1 {
+    font-size: 3em;
+  }
+
+  .titulo_principal h2 {
+    font-size: 1em;
+  }
+
+  .edificios_header img:first-child {
+    width: 15%;
+  }
+
+  .edificios_header img:nth-child(2) {
+    width: 25%;
+  }
+
+  /*SECCION PRODUCTOS*/
+  .nuestro_Producto {
+    flex-direction: column;
+  }
+
+  .producto {
+    width: 90%;
+  }
+
+  /*PORTAFOLIO*/
+  .tarjeta {
+    width: 40%;
+  }
+
+  /*OPINIONES*/
+  .opiniones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .opinion {
+    width: 80%;
+    margin: 20px;
+  }
+
+  /*SERVICIO*/
+  .servicio {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  nav > a {
+    margin-right: 5px;
+    font-size: 0.8em;
+  }
+
+  header {
+    width: 105%;
+    height: 105vh;
+  }
+
+  .titulo_principal h1 {
+    font-size: 3em;
+  }
+
+  .titulo_principal h2 {
+    font-size: 1em;
+  }
+
+  .edificios_header img:first-child {
+    width: 20%;
+  }
+
+  .edificios_header img:nth-child(2) {
+    width: 35%;
+  }
+
+  /*SECCION DE PRODUCTOS*/
+  .producto {
+    width: 100%;
+  }
+
+  .nuestro_Producto p {
+    font-size: 10px;
+  }
+
+  .producto > img {
+    width: 60%;
+  }
+
+  .descripcion_producto{
+    margin: 0;
+    width: 40%;
+  }
+
+  .descripcion_producto h2{
+    font-size: 15px;
+    padding: 20px 0 20px 0;
+    width: 120px ;
+  }
+
+  /*PORTAFOLIO*/
+  .tarjeta {
+    width: 70%;
+  }
+
+  .opinion {
+    width: 100%;
+  }
+
+  .opinion > div p {
+    font-size: 15px;
+  }
+
+  .opiniones{
+    padding: 0;
+  }
+
+  /*SERVICIO*/
+  .nuestros_servicios{
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicio {
+    width: 80%;
+  }
 }
